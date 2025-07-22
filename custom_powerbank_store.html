@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Power Banks</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert("Your customization has been submitted. We'll contact you shortly!");
+      e.target.reset();
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-white shadow-md p-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">PowerUp Customs</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#products" class="text-gray-700 hover:text-blue-600">Products</a></li>
+          <li><a href="#about" class="text-gray-700 hover:text-blue-600">About</a></li>
+          <li><a href="#customize" class="text-gray-700 hover:text-blue-600">Customize</a></li>
+          <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="text-center py-16 bg-blue-50">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Customizable Power Banks</h2>
+    <p class="text-lg text-gray-600">Personalized charging solutions for brands, gifts, and events.</p>
+  </section>
+
+  <section id="products" class="max-w-6xl mx-auto py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Product Cards -->
+    <div class="bg-white p-6 rounded-xl shadow">
+      <img src="https://via.placeholder.com/300x200" alt="Power Bank A" class="w-full h-40 object-cover mb-4 rounded" />
+      <h3 class="text-xl font-semibold text-gray-800">Power Bank A</h3>
+      <p class="text-gray-600 mb-2">5,000mAh, full-color logo print included.</p>
+      <span class="block text-blue-600 font-bold mb-4">$19.99</span>
+      <a href="#customize" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Customize Now</a>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow">
+      <img src="https://via.placeholder.com/300x200" alt="Power Bank B" class="w-full h-40 object-cover mb-4 rounded" />
+      <h3 class="text-xl font-semibold text-gray-800">Power Bank B</h3>
+      <p class="text-gray-600 mb-2">10,000mAh, laser engraving available.</p>
+      <span class="block text-blue-600 font-bold mb-4">$29.99</span>
+      <a href="#customize" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Customize Now</a>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow">
+      <img src="https://via.placeholder.com/300x200" alt="Power Bank C" class="w-full h-40 object-cover mb-4 rounded" />
+      <h3 class="text-xl font-semibold text-gray-800">Power Bank C</h3>
+      <p class="text-gray-600 mb-2">20,000mAh, multiple colors and logo positions.</p>
+      <span class="block text-blue-600 font-bold mb-4">$39.99</span>
+      <a href="#customize" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Customize Now</a>
+    </div>
+  </section>
+
+  <section id="customize" class="bg-white py-16">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Customize Your Power Bank</h3>
+      <form onsubmit="handleFormSubmit(event)" class="space-y-6 text-left">
+        <div>
+          <label class="block text-gray-700 font-semibold">Select Model</label>
+          <select class="w-full mt-1 p-2 border rounded" required>
+            <option value="">Choose a model...</option>
+            <option>Power Bank A - 5,000mAh</option>
+            <option>Power Bank B - 10,000mAh</option>
+            <option>Power Bank C - 20,000mAh</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold">Quantity</label>
+          <input type="number" class="w-full mt-1 p-2 border rounded" placeholder="e.g. 100" required />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold">Upload Logo/Design</label>
+          <input type="file" class="w-full mt-1 p-2 border rounded" />
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold">Special Instructions</label>
+          <textarea class="w-full mt-1 p-2 border rounded" rows="4" placeholder="Color preferences, logo placement, etc."></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit Custom Order</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="about" class="bg-white py-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">About PowerUp Customs</h3>
+      <p class="text-gray-600">We specialize in premium, customizable power banks for individuals, businesses, and events. Upload your logo or design, and we’ll deliver personalized tech your audience will love.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-blue-50 py-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">Get in Touch</h3>
+      <p class="text-gray-600 mb-4">Have questions or want to place a bulk order?</p>
+      <a href="mailto:support@powerupcustoms.com" class="text-blue-600 underline">support@powerupcustoms.com</a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 PowerUp Customs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
